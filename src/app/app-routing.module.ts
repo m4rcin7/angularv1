@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { BlogComponent } from './pages/blog/blog.component';
-
-const routes: Routes = [
-  { path: '/blog', component: BlogComponent }
-];
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  declarations: [],
+  imports: [BrowserModule, RouterModule.forRoot(routes)],
+  providers: [],
+  bootstrap: [],
 })
-export class AppRoutingModule { }
+export class AppModule {}
