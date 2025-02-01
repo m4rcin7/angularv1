@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { PostService } from '';
+import { PostService } from '../service/post.service';
 
 @Component({
   selector: 'app-sidebar',
