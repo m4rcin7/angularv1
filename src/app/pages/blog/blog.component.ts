@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
-import { HeaderComponent } from "../../components/header/header.component";
+import { Component, OnInit } from '@angular/core';
+import { PostService } from './post.service';
 
 @Component({
   selector: 'app-blog',
-  imports: [HeaderComponent],
   templateUrl: './blog.component.html',
-  styleUrl: './blog.component.css'
+  styleUrls: ['./blog.component.css'],
 })
-export class BlogComponent {
+export class BlogComponent implements OnInit {
+  posts: any[] = [];
 
+  constructor(private postService: PostService) {}
+
+  ngOnInit() {
+    this.posts = this.postService.getPosts();
+  }
 }

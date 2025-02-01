@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.blog-posts {
+  flex: 3;
+  padding: 20px;
+}
+
+.post {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+app-sidebar {
+  flex: 1;
+}
